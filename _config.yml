@@ -1,0 +1,15 @@
+# Site settings
+title: RESx
+description: >
+  Learning Resources of Faculty of Computer and
+  Information Sciences at Ain Shams University.
+baseurl: /FCIS-ASU-RESx/
+
+# Author Info
+author:
+  name:
+  email:
+  github:
+
+# Build settings
+markdown: kramdown

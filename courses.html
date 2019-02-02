@@ -1,0 +1,15 @@
+---
+layout: deafult
+---
+<div class="row">
+{% for course in site.courses %}
+    <div class="col-lg-3 card m-1">
+        <img class="card-img-top" src="https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2015/anewwayoftea.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ course.title }}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="{{ course.url }}" class="btn btn-primary">View More</a>
+        </div>
+    </div>
+{% endfor %}
+</div>

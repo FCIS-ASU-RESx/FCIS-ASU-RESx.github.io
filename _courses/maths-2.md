@@ -1,7 +1,6 @@
 ---
 layout: course
 title: Maths II
-permalink: /maths-2/
 repo: https://github.com/FCIS-ASU-RESx/maths-2/tree/master/
 
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

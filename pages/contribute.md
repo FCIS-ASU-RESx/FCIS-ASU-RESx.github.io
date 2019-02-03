@@ -1,5 +1,6 @@
 ---
 layout: deafult
+permalink: /contribute
 ---
 
 # How to Contribute to RESx?

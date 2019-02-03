@@ -1,15 +1,13 @@
 ---
 layout: deafult
 ---
+<h2>{{ page.title }}</h2><hr>
+<p class="my-4"> {{ page.description }} </p>
+
 <div class="row">
     {% for item in page.items %}
     {% if item.is-available %}
-        <div class="col-lg-3 card m-1">
-            <div class="card-body">
-                <h5 class="card-title">{{ item.name }}</h5>
-                <a href="https://github.com/FCIS-ASU-RESx{{ page.permalink }}tree/master/{{ item.name }}" class="btn btn-primary">Download</a>
-            </div>
-        </div>
+    <a href="{{ page.repo }}{{ item.name }}" class="col-lg-6 btn btn-{{ item.style }} py-4 rounded-0">{{ item.name }}</a>
     {% endif %}
     {% endfor %}
 </div>

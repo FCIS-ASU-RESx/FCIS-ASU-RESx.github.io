@@ -6,9 +6,9 @@ description: >
 
 # Author Info
 author:
-  name:
+  name: RESx
   email:
-  github:
+  github: https://github.com/FCIS-ASU-RESx
 
 # Build settings
 markdown: kramdown

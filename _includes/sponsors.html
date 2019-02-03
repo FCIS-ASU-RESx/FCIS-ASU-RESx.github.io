@@ -1,0 +1,26 @@
+
+<!-- Check if there are Sponsors -->
+{% assign isThereSponsors = false %}
+{% for sponsor in site.sponsors %}
+    {% if sponsor.published %}
+        {% assign isThereSponsors = true %}
+        {% break %}
+    {% endif %}
+{% endfor %}
+
+
+{% if isThereSponsors %}
+<section class="p-5 bg-dark text-light">
+    <h3 class="text-center mb-4">- Our Sponsors -</h3>
+    <div class="row justify-content-center bg-dark">
+    {% for sponsor in site.sponsors %}
+        <div class="col-2 text-center">
+            <a href="{{ sponsor.link }}">
+                <img src="{{ sponsor.image }}" class="figure-img img-fluid rounded-circle" alt="{{ sponsor.name }}">
+            </a>
+            <h4>{{ sponsor.name }}</h4>
+        </div>
+    {% endfor %}
+    </div>
+</section>
+{% endif %}

@@ -14,6 +14,10 @@ author:
 markdown: kramdown
 
 collections:
+
   courses:
     output: true
     permalink: /courses/:name
+    
+  sponsors:
+    output: true

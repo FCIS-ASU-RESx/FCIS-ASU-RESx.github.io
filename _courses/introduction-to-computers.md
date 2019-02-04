@@ -1,5 +1,4 @@
 ---
-layout: course
 number: XXX000
 image: https://scitechdaily.com/images/Engineers-Develop-Programmable-Nanophotonic-Processors.jpg
 categories: gen-1-1 programming

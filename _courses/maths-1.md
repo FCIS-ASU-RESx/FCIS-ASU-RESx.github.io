@@ -1,5 +1,4 @@
 ---
-layout: course
 number: XXX000
 image: http://www.mrbartonmaths.com/blog/wp-content/uploads/2017/06/june.png
 categories: gen-1-1 mathematics

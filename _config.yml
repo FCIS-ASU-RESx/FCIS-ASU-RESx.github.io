@@ -13,6 +13,8 @@ author:
 # Build settings
 markdown: kramdown
 
+
+# Collections declaration
 collections:
 
   courses:
@@ -26,7 +28,16 @@ collections:
   sponsors:
     output: true
 
+
+# Default values for collections
 defaults:
+
+  - scope:
+      path: ""
+      type: "courses"
+    values:
+      layout: "course"
+
   - scope:
       path: ""
       type: "courses-categories"

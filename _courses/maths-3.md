@@ -1,5 +1,4 @@
 ---
-layout: course
 number: XXX000
 image: https://www.theinformationlab.co.uk/wp-content/uploads/2017/05/featured-image.png
 categories: gen-2-1 mathematics

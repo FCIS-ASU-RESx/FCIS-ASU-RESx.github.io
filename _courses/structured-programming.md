@@ -1,5 +1,4 @@
 ---
-layout: course
 number: XXX000
 image: https://www.techdotmatrix.com/wp-content/uploads/2016/10/Programming-languages.jpg
 categories: gen-1-2 programming

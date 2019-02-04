@@ -1,5 +1,4 @@
 ---
-layout: course
 number: XXX000
 image: https://d26a57ydsghvgx.cloudfront.net/content/blog/1_Series%20headers/newzendesk-integration-blog.png
 categories: gen-1-2 mathematics

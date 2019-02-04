@@ -1,5 +1,4 @@
 ---
-layout: course
 number: XXX000
 image: https://cdn-images-1.medium.com/max/2000/1*rguQ2Y2Z920IYGkO0cHHtQ.jpeg
 categories: gen-2-1 programming

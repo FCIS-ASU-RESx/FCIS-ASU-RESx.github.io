@@ -8,7 +8,7 @@ description: >
 author:
   name: RESx
   email:
-  github: https://github.com/FCIS-ASU-RESx
+  github: https://github.com/RESx
 
 # Build settings
 markdown: kramdown

@@ -5,9 +5,7 @@ layout: default
 {{ content }}
 
 <!-- Get Category name as in filename -->
-{% assign category_name = page.path | split: "/" %}
-{% assign category_name = category_name[1] | split: "." %}
-{% assign category_name = category_name[0] %}
+{% assign category_name = page.title | slugify %}
 
 <div class="card-columns">
     {% for course in site.courses %}

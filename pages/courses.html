@@ -3,17 +3,17 @@ layout: default
 permalink: /courses
 ---
 
-<div class="row">
+<div class="card-columns">
     {% for course in site.courses %}
-    <div class="col-lg-4 my-3">
     <div class="card">
-        <img class="card-img-top" src="https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2015/anewwayoftea.jpg" alt="Card image cap">
+        {% if course.image %}
+        <img class="card-img-top" src="{{ course.image }}" alt="Card image cap">
+        {% endif %}
         <div class="card-body">
             <h5 class="card-title">{{ course.title }}</h5>
-            <p class="card-text">{{ course.description }}</p>
+            <p class="card-text">{{ course.description | truncatewords: 15 }}</p>
             <a href="{{ course.url }}" class="btn btn-primary">View More</a>
         </div>
-    </div>
     </div>
     {% endfor %}
 </div>

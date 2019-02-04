@@ -2,13 +2,15 @@
 layout: default
 ---
 
-<h2>{{ page.title }}</h2><hr>
+<h2> {{ page.title }} </h2>
+<span class="badge badge-dark"> {{ page.number }} </span>
+<hr>
 <p class="my-4"> {{ page.description }} </p>
 
-<div class="row">
-    {% for item in page.items %}
-    {% if item.is-available %}
-    <a href="{{ page.repo }}{{ item.name }}" class="col-lg-6 btn btn-{{ item.style }} py-4 rounded-0">{{ item.name }}</a>
-    {% endif %}
-    {% endfor %}
+<div class="container">
+    <div class="row">
+        {% for item in page.items %}
+        <a href="{{ site.author.github }}/{{ page.title | replace: " ", "-" | downcase }}/tree/master/{{ item.name }}" class="col-lg-6 btn btn-{{ item.style }} py-4 rounded-0">{{ item.name }}</a>
+        {% endfor %}
+    </div>
 </div>

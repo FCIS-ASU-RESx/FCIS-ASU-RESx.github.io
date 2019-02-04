@@ -1,10 +1,17 @@
 ---
 layout: default
-permalink: /courses
 ---
+
+{{ content }}
+
+<!-- Get Category name as in filename -->
+{% assign category_name = page.path | split: "/" %}
+{% assign category_name = category_name[1] | split: "." %}
+{% assign category_name = category_name[0] %}
 
 <div class="card-columns">
     {% for course in site.courses %}
+    {% if category_name == "all" or course.categories contains category_name %}
     <div class="card">
         {% if course.image %}
         <img class="card-img-top" src="{{ course.image }}" alt="Card image cap">
@@ -15,5 +22,6 @@ permalink: /courses
             <a href="{{ course.url }}" class="btn btn-primary">View More</a>
         </div>
     </div>
+    {% endif %}
     {% endfor %}
 </div>

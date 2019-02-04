@@ -19,5 +19,17 @@ collections:
     output: true
     permalink: /courses/:name
     
+  courses-categories:
+    output: true
+    permalink: /courses/:name
+
   sponsors:
     output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "courses-categories"
+    values:
+      layout: "category"
+      style: "info"

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% capture course_repo %} 
+{% capture course_repo_url %} 
 {{site.author.github}}/{{ page.title | slugify }}
 {% endcapture %} 
 
@@ -27,13 +27,16 @@ layout: default
 
 {% endfor %}
 
-<a href="{{ course_repo }}" class="text-dark"><i class="fab fa-github"></i></a><hr>
+<a href="{{ course_repo_url }}/commits" class="text-dark"><i class="fas fa-history"></i></a>
+<a href="{{ course_repo_url }}" class="text-dark"><i class="fab fa-github"></i></a>
+<hr>
+
 <p class="my-4"> {{ page.description }} </p>
 
 <div class="container">
     <div class="row">
         {% for item in page.items %}
-        <a href="{{ course_repo }}/tree/master/{{ item.name }}" class="col-lg-6 btn btn-{{ item.style }} py-4 rounded-0">{{ item.name }}</a>
+        <a href="{{ course_repo_url }}/tree/master/{{ item.name }}" class="col-lg-6 btn btn-{{ item.style }} py-4 rounded-0">{{ item.name }}</a>
         {% endfor %}
     </div>
 </div>

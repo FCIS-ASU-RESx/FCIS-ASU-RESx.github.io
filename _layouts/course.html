@@ -2,11 +2,11 @@
 layout: default
 ---
 
+{% capture course_repo_url %} 
+{{site.author.github}}/{{ page.title | slugify }}
+{% endcapture %}
+
 <div class="container my-4">
-    
-    {% capture course_repo_url %} 
-    {{site.author.github}}/{{ page.title | slugify }}
-    {% endcapture %} 
 
     <h2> {{ page.title }} </h2>
     <h6 id="date-{{ page.title | slugify }}" class="card-subtitle mb-2 text-muted">

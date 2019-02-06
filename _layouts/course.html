@@ -7,6 +7,10 @@ layout: default
 {% endcapture %} 
 
 <h2> {{ page.title }} </h2>
+<h6 id="date-{{ page.title | slugify }}" class="card-subtitle mb-2 text-muted">
+    <i class="far fa-clock"></i>
+    <script> showDate("{{ page.title | slugify }}"); </script>
+</h6>
 <span class="badge badge-dark"> {{ page.number }} </span>
 
 {% for category in page.categories %}

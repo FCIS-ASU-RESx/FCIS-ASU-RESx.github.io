@@ -1,0 +1,20 @@
+<div class="card card border-dark mb-3 my-2">
+
+    <div class="card-header text-muted">
+        {% if page.author %}
+        <a href="{{ page.author_link }}" class="text-dark"><b>{{ page.author }}</b></a> | 
+        {% endif %}
+        {{ page.date | date: '%A %d %b %Y' }}
+    </div>
+
+    <div class="card-body">
+        <h4 class="card-title">{{ page.title }}</h4>
+        <h6 class="card-subtitle mb-2 text-muted">
+            {% for tag in page.tags %}
+            <span class="badge badge-secondary"> {{ tag }} </span>
+            {% endfor %}
+        </h6>
+        <p class="card-text">{{ content }}</p>
+    </div>
+    
+</div>

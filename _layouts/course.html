@@ -2,41 +2,45 @@
 layout: default
 ---
 
-{% capture course_repo_url %} 
-{{site.author.github}}/{{ page.title | slugify }}
-{% endcapture %} 
-
-<h2> {{ page.title }} </h2>
-<h6 id="date-{{ page.title | slugify }}" class="card-subtitle mb-2 text-muted">
-    <i class="far fa-clock"></i>
-    <script> showDate("{{ page.title | slugify }}"); </script>
-</h6>
-<span class="badge badge-dark"> {{ page.number }} </span>
-
-{% for category in page.categories %}
+<div class="container my-4">
     
-    <!-- Match category style with its parent -->
-    {% for category_parent in site.courses-categories %}
-        {% assign category_parent_name = category_parent.title | slugify %}
-        {% if category_parent_name == category %}
-            {% assign category_style = category_parent.style %}
-        {% endif %}
+    {% capture course_repo_url %} 
+    {{site.author.github}}/{{ page.title | slugify }}
+    {% endcapture %} 
+
+    <h2> {{ page.title }} </h2>
+    <h6 id="date-{{ page.title | slugify }}" class="card-subtitle mb-2 text-muted">
+        <i class="far fa-clock"></i>
+        <script> showDate("{{ page.title | slugify }}"); </script>
+    </h6>
+    <span class="badge badge-dark"> {{ page.number }} </span>
+
+    {% for category in page.categories %}
+
+        <!-- Match category style with its parent -->
+        {% for category_parent in site.courses-categories %}
+            {% assign category_parent_name = category_parent.title | slugify %}
+            {% if category_parent_name == category %}
+                {% assign category_style = category_parent.style %}
+            {% endif %}
+        {% endfor %}
+
+    <a href="/courses/{{ category }}" class="badge badge-pill badge-{{ category_style }}">{{ category }}</a>
+
     {% endfor %}
 
-<a href="/courses/{{ category }}" class="badge badge-pill badge-{{ category_style }}">{{ category }}</a>
+    <a href="{{ course_repo_url }}/commits" class="text-dark"><i class="fas fa-history"></i></a>
+    <a href="{{ course_repo_url }}" class="text-dark"><i class="fab fa-github"></i></a>
+    <hr>
 
-{% endfor %}
+    <p class="my-4"> {{ page.description }} </p>
 
-<a href="{{ course_repo_url }}/commits" class="text-dark"><i class="fas fa-history"></i></a>
-<a href="{{ course_repo_url }}" class="text-dark"><i class="fab fa-github"></i></a>
-<hr>
-
-<p class="my-4"> {{ page.description }} </p>
-
-<div class="container">
-    <div class="row">
-        {% for item in page.items %}
-        <a href="{{ course_repo_url }}/tree/master/{{ item.name }}" class="col-lg-6 btn btn-{{ item.style }} py-4 rounded-0">{{ item.name }}</a>
-        {% endfor %}
+    <div class="container">
+        <div class="row">
+            {% for item in page.items %}
+            <a href="{{ course_repo_url }}/tree/master/{{ item.name }}" class="col-lg-6 btn btn-{{ item.style }} py-4 rounded-0">{{ item.name }}</a>
+            {% endfor %}
+        </div>
     </div>
+
 </div>

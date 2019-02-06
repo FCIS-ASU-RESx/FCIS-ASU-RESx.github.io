@@ -2,28 +2,32 @@
 layout: default
 ---
 
-{{ content }}
+<div class="container my-4">
 
-<!-- Get Category name as in filename -->
-{% assign category_name = page.title | slugify %}
+    {{ content }}
 
-<div class="card-columns">
-    {% for course in site.courses %}
-    {% if category_name == "all" or course.categories contains category_name %}
-    <div class="card">
-        {% if course.image %}
-        <img class="card-img-top" src="{{ course.image }}" alt="Card image cap">
-        {% endif %}
-        <div class="card-body">
-            <h5 class="card-title">{{ course.title }}</h5>
-            <h6 id="date-{{ course.title | slugify }}" class="card-subtitle mb-2 text-muted">
-                <i class="far fa-clock"></i>
-                <script> showDate("{{ course.title | slugify }}"); </script>
-            </h6>
-            <p class="card-text">{{ course.description | truncatewords: 15 }}</p>
-            <a href="{{ course.url }}" class="btn btn-primary">View More</a>
+    <!-- Get Category name as in filename -->
+    {% assign category_name = page.title | slugify %}
+
+    <div class="card-columns">
+        {% for course in site.courses %}
+        {% if category_name == "all" or course.categories contains category_name %}
+        <div class="card">
+            {% if course.image %}
+            <img class="card-img-top" src="{{ course.image }}" alt="Card image cap">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ course.title }}</h5>
+                <h6 id="date-{{ course.title | slugify }}" class="card-subtitle mb-2 text-muted">
+                    <i class="far fa-clock"></i>
+                    <script> showDate("{{ course.title | slugify }}"); </script>
+                </h6>
+                <p class="card-text">{{ course.description | truncatewords: 15 }}</p>
+                <a href="{{ course.url }}" class="btn btn-primary">View More</a>
+            </div>
         </div>
+        {% endif %}
+        {% endfor %}
     </div>
-    {% endif %}
-    {% endfor %}
+
 </div>

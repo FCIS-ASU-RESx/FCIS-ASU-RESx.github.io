@@ -10,17 +10,20 @@
 
 
 {% if isThereSponsors %}
-<section class="p-5 bg-dark text-light">
-    <h3 class="text-center mb-4">- Our Sponsors -</h3>
-    <div class="row justify-content-center bg-dark">
+<div class="row justify-content-center p-5 bg-dark text-light">
+
+    <div class="col-12 mb-4 text-center">
+        <h2>Our Sponsors</h2>
+    </div>
+
     {% for sponsor in site.sponsors %}
-        <div class="col-2 text-center">
+        <div class="col-lg-1 col-6 my-3 text-center">
             <a href="{{ sponsor.link }}">
                 <img src="{{ sponsor.image }}" class="figure-img img-fluid rounded-circle" alt="{{ sponsor.name }}">
             </a>
             <h4>{{ sponsor.name }}</h4>
         </div>
     {% endfor %}
-    </div>
-</section>
+
+</div>
 {% endif %}

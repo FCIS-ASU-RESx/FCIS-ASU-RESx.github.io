@@ -14,19 +14,17 @@ layout: default
         {% if category_name == "all" or course.categories contains category_name %}
 
         <div class="wow animated fadeIn" data-wow-delay=".15s">
-            <a href="{{ course.url }}" class="no-decoration text-dark">
-                <div class="card">
-                    {% if course.image %}
-                    <img class="card-img-top" src="{{ course.image }}" alt="Card image cap">
-                    {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ course.title }}</h5>
-                        <h6 id="date-{{ course.title | slugify }}" class="card-subtitle mb-2 text-muted">
-                            <i class="far fa-clock"></i>
-                            <script> showDate("{{ course.title | slugify }}"); </script>
-                        </h6>
-                        <p class="card-text">{{ course.description | truncatewords: 15 }}</p>
-                    </div>
+            <a href="{{ course.url }}" class="card text-dark">
+                {% if course.image %}
+                <img class="card-img-top" src="{{ course.image }}" alt="Card image cap">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ course.title }}</h5>
+                    <h6 id="date-{{ course.title | slugify }}" class="card-subtitle mb-2 text-muted">
+                        <i class="far fa-clock"></i>
+                        <script> showDate("{{ course.title | slugify }}"); </script>
+                    </h6>
+                    <p class="card-text">{{ course.description | truncatewords: 15 }}</p>
                 </div>
             </a>
         </div>

@@ -5,7 +5,7 @@ $(function(){
         function(){ $(this).animate({ marginTop: "-=1%", marginBottom: "+=1%" }, 200) },
 
         // trigger when mouse out
-        function(){ $(this).animate({ marginTop: "0%", marginBottom: "-=1%" }, 200) }
+        function(){ $(this).animate({ marginTop: "+=1%", marginBottom: "-=1%" }, 200) }
     );
 
 });

@@ -39,3 +39,36 @@
     margin-top: -20px;
     font-size: 12px;
 }
+
+
+// Animated Link
+.animated-link {
+    display: inline-block;
+    text-decoration: none!important;
+}
+
+.animated-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    margin-top: -2px;
+    height: .15em;
+    background: #2962FF; // default: blue
+    transition: width .35s;
+}
+
+.animated-link-black::after {
+    background: #343a40;
+}
+
+.animated-link-white::after {
+    background: #ffffff;
+}
+
+.animated-link-red::after {
+    background: #dc3545;
+}
+
+.animated-link:hover::after {
+    width: 100%;
+}

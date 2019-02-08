@@ -2,12 +2,15 @@
 ---
 
 // Cards Styling
-.card:hover{
+.card:hover {
     box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.32);
     -moz-box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.32);
     -webkit-box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.32);
 }
 
+.no-decoration {
+    text-decoration: none;
+}
 
 // Team Member
 .chip {

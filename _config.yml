@@ -3,12 +3,13 @@ title: RESx
 description: >
   Learning Resources of Faculty of Computer and
   Information Sciences at Ain Shams University.
+repo_url: https://github.com/RESx/RESx.github.io/
 
 # Author Info
 author:
   name: RESx
   email:
-  github: https://github.com/RESx
+  github: https://github.com/RESx/
 
 # Build settings
 markdown: kramdown

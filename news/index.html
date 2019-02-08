@@ -1,27 +1,29 @@
 ---
-layout: document
+layout: default
 ---
 
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-    {{ post }}
-{% endfor %}
+<div class="container my-4">
+	<!-- This loops through the paginated posts -->
+	{% for post in paginator.posts %}
+		{{ post }}
+	{% endfor %}
 
-<!-- Pagination links -->
-<div class="text-center">
+	<!-- Pagination links -->
+	<div class="text-center">
 
-	{% if paginator.previous_page %}
-		<a href="{{ paginator.previous_page_path }}" class="badge badge-dark">Previous</a>
-	{% else %}
-		<span class="badge badge-light text-muted">Previous</span>
-	{% endif %}
+		{% if paginator.previous_page %}
+			<a href="{{ paginator.previous_page_path }}" class="badge badge-dark">Previous</a>
+		{% else %}
+			<span class="badge badge-light text-muted">Previous</span>
+		{% endif %}
 
-	<small class="mx-2"> Page <b>{{ paginator.page }}</b> of {{ paginator.total_pages }} </small>
+		<small class="mx-2"> Page <b>{{ paginator.page }}</b> of {{ paginator.total_pages }} </small>
 
-	{% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path }}" class="badge badge-dark">Next</a>
-	{% else %}
-		<span class="badge badge-light text-muted">Next</span>
-	{% endif %}
+		{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path }}" class="badge badge-dark">Next</a>
+		{% else %}
+			<span class="badge badge-light text-muted">Next</span>
+		{% endif %}
 
+	</div>
 </div>

@@ -77,3 +77,12 @@ $rounded-borders: 15px;
         background: #dc3545;
     }
 }
+
+.document-footer {
+    font-size: 10px;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-align: right;
+
+    >a { @extend .animated-link; }
+}

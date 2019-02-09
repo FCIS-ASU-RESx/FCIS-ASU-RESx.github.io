@@ -167,11 +167,13 @@ body {
             color: white;
         }
     }
-}
 
-.document-footer {
-    font-size: 10px;
-    text-decoration: underline;
-    text-decoration-color: yellow;
-    text-align: right;
+    footer {
+        font-size: 10px;
+        color: #6c757d;
+        text-decoration: underline;
+        text-decoration-color: yellow;
+        text-align: right;
+        margin-right: 2em;
+    }
 }

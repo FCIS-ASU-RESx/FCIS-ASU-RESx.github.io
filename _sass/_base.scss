@@ -1,6 +1,13 @@
-// Cards Styling
-$rounded-borders: 15px;
+// Defaults
+body {
+    font-family: $poppins-font;
+}
 
+.badge {
+    font-weight: 500;
+}
+
+// Cards Styling
 .card {
     border-radius: $rounded-borders;
     text-decoration: none!important;
@@ -14,7 +21,6 @@ $rounded-borders: 15px;
         box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, .24);
     }
 }
-
 
 // Team Member
 .chip {

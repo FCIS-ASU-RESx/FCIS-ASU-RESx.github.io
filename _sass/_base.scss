@@ -3,9 +3,18 @@ body {
     font-family: $poppins-font;
 }
 
+
+// Badges
 .badge {
     font-weight: 500;
 }
+
+.beta-badge {
+    font-size: 12px;
+    margin: 0 -48px -0 -5px;
+    vertical-align: super;
+}
+
 
 // Cards Styling
 .card {

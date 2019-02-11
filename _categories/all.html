@@ -3,7 +3,7 @@
 
 <!-- Print Sorted Categories Cloud -->
 
-{% assign sorted_categories = site.courses-categories | sort: 'title' %}
+{% assign sorted_categories = site.categories | sort: 'title' %}
 
 <div class="container">
 {% for category in sorted_categories %}

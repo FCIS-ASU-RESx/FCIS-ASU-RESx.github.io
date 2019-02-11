@@ -18,7 +18,7 @@ layout: default
     {% for category in page.categories %}
 
         <!-- Match category style with its parent -->
-        {% for category_parent in site.courses-categories %}
+        {% for category_parent in site.categories %}
             {% assign category_parent_name = category_parent.title | slugify %}
             {% if category_parent_name == category %}
                 {% assign category_style = category_parent.style %}

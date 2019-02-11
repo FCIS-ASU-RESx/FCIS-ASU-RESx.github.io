@@ -26,7 +26,7 @@ collections:
     output: true
     permalink: /courses/:name
     
-  courses-categories:
+  categories:
     output: true
     permalink: /courses/:name
 
@@ -42,7 +42,7 @@ defaults:
 
   - scope:
       path: ""
-      type: "courses-categories"
+      type: "categories"
     values:
       layout: "category"
       style: "info"

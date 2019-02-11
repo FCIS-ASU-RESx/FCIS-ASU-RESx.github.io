@@ -30,12 +30,6 @@ collections:
     output: true
     permalink: /courses/:name
 
-  sponsors:
-    output: true
-
-  team:
-    output: true
-
 
 # Default values for collections
 defaults:
@@ -52,9 +46,3 @@ defaults:
     values:
       layout: "category"
       style: "info"
-
-  - scope:
-      path: ""
-      type: "team"
-    values:
-      layout: "member"

@@ -1,0 +1,7 @@
+{% for member in site.data.members %}
+<div class="chip bg-light my-2">
+    <a href="{{ member.link }}"><img class="chip-img" src="{{ member.image }}"></a>
+    <h3 class="chip-name">{{ member.name }}</h3>
+    <p class="chip-role text-muted">{{ member.role }}</p>
+</div>
+{% endfor %}

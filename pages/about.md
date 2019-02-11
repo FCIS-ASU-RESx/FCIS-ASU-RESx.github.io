@@ -23,4 +23,4 @@ Thanks to all the great [Humans][contributors] who contributed to this project.
 #### Core Team
 
 These are the humans that form RESx core team, which runs the project.
-{% for member in site.team %} {{ member }} {% endfor %}
+{% include members.html %}
